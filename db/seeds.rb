@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do |item|
+  Item.create!(
+    term: "term #{item}",
+    definition: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+  )
+end
+
+skills = [
+  { title: "Rails", percent: 45},
+  {title: "JavaScript", percent: 35},
+  {title: "React", percent: 20}
+]
+
+skills.each do |skill|
+  Skill.create!(title: skill[:title], percent: skill[:percent])
+end
